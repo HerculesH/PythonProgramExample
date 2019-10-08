@@ -1,0 +1,48 @@
+BEEP source code in p6InputC.txt:
+1. VAR int money 87
+2. VAR int quarter 0
+3. VAR int dime 0
+4. VAR int penny 0
+5. VAR int working
+6. ASSIGN working money
+7. PRINT "For" money "cents," "change:"
+8. # Determine number of quarters
+9. Loop25: if > 25 working LAfter25
+10.     ASSIGN quarter + quarter 1
+11.     ASSIGN working - working 25
+12.     GOTO Loop25
+13. LAfter25: PRINT "quarters=" quarter
+14. # Determine number of quarters
+15. Loop10: if > 10 working LAfter10
+16.     ASSIGN dime + dime 1
+17.     ASSIGN working - working 10
+18.     GOTO Loop10
+19. LAfter10: PRINT "dimes=" dime
+20. # Determine number of pennies
+21. Loop1: if >  1 working LDone
+22.     ASSIGN penny + penny 1
+23.     ASSIGN working - working 1
+24.     GOTO Loop1
+25. LDone: PRINT "pennies=" penny
+26. PRINT "EndPgm"
+Variables:
+    Variable     Type      Value   
+    DIME         INT       0         
+    MONEY        INT       87        
+    PENNY        INT       0         
+    QUARTER      INT       0         
+    WORKING      INT                 
+Labels:
+    Label        Statement
+    LAFTER10     19        
+    LAFTER25     13        
+    LDONE        25        
+    LOOP1        21        
+    LOOP10       15        
+    LOOP25       9         
+execution begins ...
+For 87 cents, change:
+quarters= 3
+dimes= 1
+pennies= 2
+EndPgm
